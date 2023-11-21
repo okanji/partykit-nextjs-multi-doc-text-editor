@@ -1,6 +1,6 @@
 ## PartyKit example: multi document collaborative text editor
 
-![text editor demo](./screen.png)
+![text editor demo](./public/screen.png)
 
 This example app features a collaborative text editor built with [Yjs](https://yjs.dev/), [Tiptap](https://tiptap.dev/) and [Supabase](https://supabase.com/).
 
