@@ -6,8 +6,6 @@ This example app features a collaborative text editor built with [Yjs](https://y
 
 ## Getting Started
 
-Then, create a new Supabase project and open the created `.env` file to fill in the missing environment variables with the new project information.
-
 In Supabase's SQL editor, create a `documents` table with:
 
 ```sql
