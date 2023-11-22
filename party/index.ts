@@ -16,9 +16,13 @@ export default class PartyKitServer implements Party.Server {
 
   async onConnect(connection: Party.Connection, ctx: Party.ConnectionContext) {
     // Create a single supabase client for interacting with your database
-    const supabase = createClient(SUPABASE_URL, SUPABASE_KEY, {
-      auth: { persistSession: false }
-    });
+    const supabase = createClient(
+      this.party.env.SUPABASE_URL as string,
+      this.party.env.SUPABASE_KEY as string,
+      {
+        auth: { persistSession: false }
+      }
+    );
 
     await onConnect(connection, this.party, {
       load: async () => {
@@ -37,8 +41,6 @@ export default class PartyKitServer implements Party.Server {
 
       callback: {
         handler: async (doc) => {
-          console.log("HANDLER", this.party.id);
-
           await this.party.storage.put(
             this.party.id,
             Y.encodeStateAsUpdate(doc)
