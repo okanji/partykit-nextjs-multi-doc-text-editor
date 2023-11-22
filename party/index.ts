@@ -8,9 +8,6 @@ import * as Y from "yjs";
 const transformer = TiptapTransformer.extensions(getBaseExtensions());
 const rootFragmentField = "default";
 
-const SUPABASE_URL = "";
-const SUPABASE_KEY = "";
-
 export default class PartyKitServer implements Party.Server {
   constructor(readonly party: Party.Party) {}
 
